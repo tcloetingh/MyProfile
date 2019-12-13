@@ -3,10 +3,10 @@
 > Rails 5.2.3 
 
 ### Features
--Chat engine via ActionCable
--Blog updates
--Portfolio
--Drag and drop skills interface
+* Chat engine via ActionCable
+* Blog updates
+* Portfolio
+* Drag and drop skills interface
 
 
 ```ruby
