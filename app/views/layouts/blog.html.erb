@@ -20,8 +20,7 @@
 
     <%= render "shared/nav", location: 'bottom' %>
 
-    <% if session[:setsource] %>
-      Thanks for visiting me from <%= session[:setsource] %>
-    <% end %>
+    <% session_helper %>
+    
   </body>
 </html>
