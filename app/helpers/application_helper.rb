@@ -15,4 +15,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end 
+
+  def set_copyright
+    CloetinghViewTool::Renderer.copyright('Tyler Cloetingh', 'All rights reserved')
+  end 
 end
