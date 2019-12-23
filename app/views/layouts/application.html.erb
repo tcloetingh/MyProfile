@@ -14,18 +14,25 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-  
-    <%= render "shared/nav", location: 'top' %>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-    <%= login_helper %>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        
+          <%= render "shared/application_nav", location: 'application/nav' %>
 
-    <%= yield %>
+          <%= login_helper %>
 
-    <%= set_copyright %>
-     
-    <%= session_helper %>
-    
+          <%= yield %>
+
+          <%= set_copyright %>
+          
+          <%= session_helper %>
+
+        </div>
+      </div>
+    </div>
   </body>
 </html>
