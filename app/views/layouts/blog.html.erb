@@ -32,8 +32,6 @@
     <div class="container">
       <div class="row">
 
-    <!--- start of sidebar --->
-
         <%= yield %>
 
         <div class="col-sm-3 offset-sm-1 blog-sidebar">
@@ -67,6 +65,7 @@
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->
+      </div>
 
         <!--- start of footer --->
 
@@ -77,11 +76,7 @@
           </p>
         </footer>
 
-
-        <%= render "shared/nav", location: 'bottom' %>
-
         <%= session_helper %>
-      </div>
     </div>
   </body>
 </html>
