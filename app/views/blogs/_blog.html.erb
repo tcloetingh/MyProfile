@@ -5,7 +5,7 @@
     <% if logged_in?(:site_admin) %>
       <p class="blog-post-meta">
         <%= link_to blog.status, toggle_status_blog_path(blog) %> /
-        <%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:admin, :customer, :etc) %> /
+        <%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:admin, :customer) %> /
         <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin) %>
         <%= link_to 'New Blog', new_blog_path if logged_in?(:admin) %>
       </p>
