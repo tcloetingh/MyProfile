@@ -15,13 +15,13 @@
   <body>
     <%= render 'shared/portfolio_nav' %>
 
-    <%= render 'shared/portfolio_masthead' %>
+    <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
    
-  <%= yield %>
+    <%= yield %>
 
-  <%= render 'shared/portfolio_footer' %>
+    <%= render 'shared/portfolio_footer' %>
 
-  <%= session_helper %>
+    <%= session_helper %>
 
   </body>
 </html>
