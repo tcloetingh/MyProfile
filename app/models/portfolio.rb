@@ -9,6 +9,10 @@ class Portfolio < ApplicationRecord
     where(subtitle: 'REACT')
   end
 
+  def self.by_position 
+    order("position ASC")
+  end
+
   scope :ror_filter, -> {where(subtitle: 'Ruby on Rails')}
 
   after_initialize :set_defaults
@@ -18,4 +22,4 @@ class Portfolio < ApplicationRecord
     self.thumb_image ||= Placeholder.image_generator(height: '350', width: '200')
   end
 
-end
+end 
