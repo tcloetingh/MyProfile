@@ -1,7 +1,7 @@
-<%= form_with(model: blog) do |form| %>
+<%= form_for(blog) do |form| %>
   <% if blog.errors.any? %>
     <% blog.errors.full_messages.each do |error| %>
-      <%= js add_gritter(error, :title => "Tyler Cloetinghs Profile") %>
+      <%= alert_generator(error) %>
     <% end %>
   <% end %>
 
