@@ -5,5 +5,3 @@ class ApplicationController < ActionController::Base
   include DynamicTitle
   
 end
-
-
