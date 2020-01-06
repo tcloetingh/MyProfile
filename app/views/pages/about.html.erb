@@ -1,14 +1,79 @@
-<h1>About Me</h1>
-<hr>
+<br />
+<br />
+<br />
+<div class="app-card-container">
+  <div class="card">
+    <h1>About Me</h1>
+    <hr>
 
-<div class="row">
-  <div calss="col-md-4">
-    <%= image_tag "about_profile_pic", width: 300, alt: "profile image" %>
-  </div>
-  <div class="col-md-8">
-    <p>Junior developer currently working in GIS looking to take on Web Development full-time. 
-    Building on a foundation in computer science and the timeless functional language, C. I have been committed to web developement
-    since 2018. My skillset includes a focus in Javascript & Ruby on Rails, while using frameworks 
-    like REACT and Bootstrap.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "about_profile_pic", width: 300, alt: "profile image", class: 'profile-img' %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <p>Junior developer currently working in GIS looking to take on Web Development full-time. 
+        Building on a foundation in computer science and the timeless functional language, C. I have been committed to web developement
+        since 2018. My skillset includes a focus in Javascript & Ruby on Rails, while using frameworks 
+        like REACT and Bootstrap.</p>
+
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobsHistory"
+            aria-expanded="false"
+            aria-controller="jobsHistory"
+          >
+            Job History
+          </button>
+
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controller="education"
+          >
+            Education 
+          </button>
+        </p>
+        <p>
+          <div class="collapse" id="jobsHistory">
+            <div class="card card-block">
+              job 1
+            </div>
+            <div class="card card-block">
+              job 2
+            </div>
+          </div>
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              education 1
+            </div>
+            <div class="card card-block">
+              education 2
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
